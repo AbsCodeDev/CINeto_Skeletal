@@ -1,0 +1,61 @@
+<div id="page-content" class="container">
+    <div id="blog-title" class="row">
+        <div class="col-sm-12">
+            <h1 class="blog-header">[@content_name@]</h1>
+        </div>
+        <div class="col-sm-12">
+            [%breadcrumb%]
+                [%param *header%]
+                    <ul class="breadcrumb">
+                        <li><a href="[@config:home_url@]">Home</a></li>
+                [%/param%]
+                [%param *body%]
+                    <li><a href="[@url@]">[@name@]</a></li>
+                [%/param%]
+                [%param *body_current%]
+                    <li>[@name@]</li>
+                [%/param%]
+                [%param *footer%]
+                    </ul>
+                [%/param%]
+            [%/breadcrumb%]
+        </div>
+    </div>
+   <div class="row">
+       <div class="col-sm-9">
+           <!--<p class="text-left">
+                [%IF [@content_author@]%]
+                    <small>Author: [@content_author@] &nbsp;</small>
+                [%/IF%]
+                [%if [@date_posted@] != 0000-00-00 00:00:00%]
+                    <small>&nbsp;&nbsp;|&nbsp;&nbsp;Date Posted: [%FORMAT type:'date'%][@date_posted@][%/FORMAT%]&nbsp;</small>
+                [%/IF%]
+            </p>-->
+            <img style="width:100%;" src="[%asset_url type:'content' id:'[@content_id@]' default:'[@config:imageurl@]/pixel.gif'/%]" />
+            <p>&nbsp;</p>
+            [@page_content@]
+           <br>
+           <p>
+           Need more help? Get a FREE QUOTE today. <br>
+           <a href="https://www.citiindustries.com.au/contact-us" class="btn btn-sm btn-success2 btn-enquire-top" style="margin-top:10px;">ENQUIRE ONLINE</a></p>
+           <br>
+           <div class="dropdown" style="float:right;">
+                <button class="btn btn-default2 btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    Share: <i class="fa fa-facebook-square text-facebook"></i>
+                    <i class="fa fa-twitter-square text-twitter"></i>
+                    <i class="fa fa-pinterest-square text-pinterest"></i>
+                    <i class="fa fa-google-plus-square text-google-plus"></i>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a class="js-social-share" role="menuitem" tabindex="-1" href="//www.facebook.com/sharer/sharer.php?u=[%url_encode%][@url@][%/url_encode%]"><i class="fa fa-facebook-square text-facebook"></i> Facebook</a></li>
+                    <li role="presentation"><a class="js-social-share" role="menuitem" tabindex="-1" href="//twitter.com/intent/tweet/?text=[%url_encode%][@content_name@][%/url_encode%]&amp;url=[%url_encode%][@url@][%/url_encode%]"><i class="fa fa-twitter-square text-twitter"></i> Twitter</a></li>
+                    <li role="presentation"><a class="js-social-share" role="menuitem" tabindex="-1" href="//www.pinterest.com/pin/create/button/?url=[%url_encode%][@url@][%/url_encode%]&amp;description=[%url_encode%][@content_name@][%/url_encode%]"><i class="fa fa-pinterest-square text-pinterest"></i> Pinterest</a></li>
+                    <!--<li role="presentation"><a class="js-social-share" role="menuitem" tabindex="-1" href="//plus.google.com/share?url=[%url_encode%][@url@][%/url_encode%]"><i class="fa fa-google-plus-square text-google-plus"></i> Google+</a></li>-->
+                </ul>
+            </div>
+           
+       </div>
+       [%load_template file:'cms/includes/sidebar.template.html'/%]
+    </div>
+</div>

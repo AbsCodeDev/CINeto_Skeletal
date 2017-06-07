@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="keywords" content="[%url_info name:'meta_keywords'/%]"/>
+<meta name="description" content="[%url_info name:'meta_description'/%]"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
+<meta property="og:image" content="[%if [@config:current_page_type@] eq 'product'%][@config:homeurl@][%asset_url type:'product' id:'[@SKU@]' thumb:'full'/%][%ELSEIF [@config:current_page_type@] eq 'content'%][@config:homeurl@][%ASSET_url type:'content' id:'[@content_id@]' default:'/assets/website_logo.png'%][%/ASSET_url%][%ELSE%][@config:homeurl@]/assets/website_logo.png[%/if%]"/>
+<meta property="og:title" content="[%url_info name:'page_title'/%]"/>
+<meta property="og:site_name" content="[@config:website_name@]"/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="[@config:canonical_url@]"/>
+<meta property="og:description" content="[%url_info name:'meta_description'/%]"/>
+[@config:GOOGLE_VERIFICATION_CODE@]
+<title>[%url_info name:'page_title'/%]</title>
+<link rel="canonical" href="[@config:canonical_url@]"/>
+<link rel="shortcut icon" href="[@config:secure_home_url@]/assets/favicon_logo.png"/>
+<link class="theme-selector" rel="stylesheet" type="text/css" href="[%ntheme_asset%]css/app.css[%/ntheme_asset%][%format type:'date' format:'#U'%]now[%/format%]" media="all"/>
+<link rel="stylesheet" type="text/css" href="[%ntheme_asset%]css/style.css[%/ntheme_asset%][%format type:'date' format:'#U'%]now[%/format%]" media="all"/>
+<link rel="stylesheet" type="text/css" href="[%ntheme_asset%]css/slick.css[%/ntheme_asset%]"/>
+<link rel="stylesheet" type="text/css" href="[%ntheme_asset%]css/slick-theme.css[%/ntheme_asset%]"/>
+<!--[if lte IE 8]>
+	[%cdn_asset html:'1' type:'js' library:'html5shiv' version:'3.7.0'%]html5shiv.js[%/cdn_asset%]
+	[%cdn_asset html:'1' type:'js' library:'respond.js' version:'1.3.0'%]respond.min.js[%/cdn_asset%]
+<![endif]-->
+[%tracking_code type:'Declaration'/%]
+</head>
+<body id="n_[@config:current_page_type@]" class="n_[@CONFIG:TEMPLATELANG@]">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WBPBKC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WBPBKC');</script>
+<!-- End Google Tag Manager -->
+<div class="wrapper-header">
+    <div class="row">
+        <div class="container">
+            <div class="row row-padded">
+                <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-3 wrapper-logo">
+                    <a href="[@config:homeurl@]" title="[@config:company_name@]">
+                        <img class="logo" src="[@config:imageurl@]/website_logo.png" alt="[@config:company_name@]"/>
+                    </a>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-sm-3 col-md-4 col-md-offset-1">
+                    <div class="header-search">
+                        <form name="productsearch" method="get" action="/">
+                            <input type="hidden" name="rf" value="kw"/>
+                            <div class="input-group">
+                                <input class="form-control ajax_search" value="[%nohtml%][%filter ID:'keywords'%][%/filter%][%/nohtml%]" id="name_search" autocomplete="off" name="kw" type="text" placeholder="Search for..." />
+                                <span class="input-group-btn">
+                                    <button type="submit" value="Search" class="btn btn-default btn-search"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="row hidden-xs">
+                        <ul id="top-links">
+                            <li><a href="[%url page:'account'/%]">My Account</a></li>
+                            [%if [@user:username@]%]
+                            <li> <a href="[%url page:'account' type:'logout'/%]"><i class="fa fa-off"></i> Log Out</a> </li>
+                            [%else%]
+                            <li> <a href="[%url page:'account' type:'login'/%]" title="Login">Login</a> </li>
+                            [%/if%]
+                            <li>
+                                <a href="[%url page:'checkout' type:'cart'/%]" id="cartcontentsheader">
+                                    <i class="fa fa-shopping-cart"></i> <span class="visible-lg visible-inline-lg">My Cart</span> - <span rel="a2c_item_count">[%format type:'number' dp:'0'%][%CART id:'total_items'%][%/CART%][%/format%]</span>
+                                </a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="box" id="neto-dropdown">
+                                        <div class="body padding" id="cartcontents"></div>
+                                        <div class="footer"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 text-right">
+                            <!--<ul id="top-sm" class="list-inline list-social">
+                                [%if [@config:facebook_account_id@]%]
+                                <li><a href="[@config:facebook_account_id@]" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                                [%/if%]
+                                [%if [@config:twitter_account_id@]%]
+                                <li><a href="[@config:twitter_account_id@]" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                                [%/if%]
+                                [%if [@config:googleplus_account_id@]%]
+                                <li><a href="[@config:googleplus_account_id@]" target="_blank"><i class="fa fa-google-plus-square aria-hidden="true""></i></a></li>
+                                [%/if%]
+                            </ul> -->
+                        </div>
+                        <div id="top-phone" class="col-xs-12 col-sm-12 text-right">
+                            <p style="color:#2eb2ff;"><i class="fa fa-phone"></i> <a href="tel:1300 002 484">[@config:company_phone@]</a> <small style="color:#888;font-size:14px;font-weight:400;">OR</small> <a href="https://www.citiindustries.com.au/contact-us" class="btn btn-sm btn-success2 btn-enquire-top">ENQUIRE ONLINE</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ci-nav-wrapper" class="row">
+        <div class="container">
+            <div class="col-xs-12 nopadding">
+                <div class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <ul class="navigation-list list-inline visible-xs nMobileNav">
+                            <li><a href="#" class="nToggleMenu" data-target=".navbar-responsive-collapse"><span class="icon"><i class="fa fa-bars"></i></span><br>
+                            Menu</a></li>
+                            <li><a href="/products"><span class="icon"><i class="fa fa-gift"></i></span><br>
+                            Shop</a></li>
+                            <li><a href="[%url page:'checkout' type:'cart'/%]"><span class="icon"><i class="fa fa-shopping-cart"></i></span><br>
+                            Cart (<span rel="a2c_item_count">[%format type:'number' dp:'0'%][%CART id:'total_items'%][%/CART%][%/format%]</span>)</a></li>
+                            <li><a href="/_myacct/"><span class="icon"><i class="fa fa-user"></i></span><br>
+                            Account</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-collapse collapse navbar-responsive-collapse">
+                        <ul class="nav navbar-nav">
+                            [%cache type:'menu' id:'header-content-menu'%]
+                                [%menu id:'web_header'%]
+                                    [%param *level_1%]
+                                        <li class="[%if [@next_level@]%]dropdown dropdown-hover[%/if%]"> <a href="[@url@]" [%if [@next_level@]%] class="custom-link-toggle dropdown-toggle"[%/if%]>[@name@] [%if [@next_level@]%]<span class="caret"></span>[%/if%]</a>
+                                            [%if [@next_level@]%]
+                                                <ul class="dropdown-menu">
+                                                    [@next_level@]
+                                                </ul>
+                                            [%/if%]
+                                        </li>
+                                        [%/param%]
+                                    [%param *level_2%]
+                                        <li class="[%if [@next_level@]%]dropdown dropdown-hover[%/if%]"> <a href="[@url@]" class="nuhover dropdown-toggle">[@name@]</a>
+                                            [%if [@next_level@]%]
+                                                <ul class="dropdown-menu dropdown-menu-horizontal">
+                                                    [@next_level@]
+                                                </ul>
+                                            [%/if%]
+                                        </li>
+                                        [%/param%]
+                                    [%param *level_3%]
+                                        <li class="[%if [@next_level@]%]dropdown dropdown-hover[%/if%]"> <a href="[@url@]">[@name@]</a>
+                                            [%if [@next_level@]%]
+                                                <ul class="dropdown-menu dropdown-menu-horizontal">
+                                                    [@next_level@]
+                                                </ul>
+                                            [%/if%]
+                                        </li>
+                                    [%/param%]
+                                [%/menu%]
+                            [%/ cache%]
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="main-content" class="container-fluid" role="main">
+    <div class="row">

@@ -1,0 +1,32 @@
+<div id="page-content" class="container">
+    <div id="page-title" class="row">
+        <div class="col-md-12">
+            <h1 class="page-header" style="text-align:center;">[@content_name@]</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div>
+                <center>
+                    <p>Your message has been received. We will respond to you shortly.</p>
+                    <p>&nbsp;</p>
+                </center> 
+            </div>
+            <hr>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <div class="col-md-12">
+                [%thumb_list type:'products' template:'' sortby:'popular' filter_category:'0' limit:'4'%]
+                     [%param *header%]
+                          <h3>Our Products</h3>
+                            <p>&nbsp;</p>
+                          <div class="row">
+                     [%/param%]
+                     [%param *footer%]
+                          </div>
+                     [%/param%]
+                [%/thumb_list%]
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,256 @@
+<div id="banner-navigation" class="container">
+    <div class="row">
+        <style>
+            .grow { transition: all .2s ease-in-out; width: 100%; }
+            .grow:hover { transform: scale(1.1); }
+        </style>
+        <div style="display:block;height:40px;"></div>
+        <div class="col-md-4" style="margin-bottom:25px;">
+            <div style="overflow:hidden;">
+                <a href="https://www.citiindustries.com.au/greasetrap-products"><img class="grow" src="assets/images/new-greastrap3.jpg" /></a>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom:25px;">
+            <div style="overflow:hidden;">
+                <a href="https://www.citiindustries.com.au/wash-bays-design-and-build"><img class="grow" src="assets/images/new-washbay3.jpg" /></a>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom:25px;">
+            <div style="overflow:hidden;">
+                <a href="https://www.citiindustries.com.au/hydraulic-design"><img class="grow" src="assets/images/new-hydraulicdesign.jpg" /></a>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom:25px;">
+            <div style="overflow:hidden;">
+                <a href="https://www.citiindustries.com.au/carpark-products"><img class="grow" src="assets/images/new-carpark2.jpg" /></a>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom:25px;">
+            <div style="overflow:hidden;">
+                <a href="https://www.citiindustries.com.au/hotwater-products"><img class="grow" src="assets/images/new-hotwater.jpg" /></a>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom:25px;">
+            <div style="overflow:hidden;">
+                <a href="https://www.citiindustries.com.au/kitchen-plumbing-products"><img class="grow" src="assets/images/new-kitchen2.jpg" /></a>
+            </div>
+        </div>
+    <div style="display:block;height:40px;"></div>
+    </div>
+</div>
+
+<div id="homepage-content">
+    <div class="container">
+        [@page_content@]
+    </div>
+</div>
+
+<div id="homepage-seal-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 seal-image">
+                <img src="https://www.citiindustries.com.au/assets/images/Guarantee-Seal-400x300.png" alt="Citi Industries - Guaranteed Safe" />
+            </div>
+            <div id="shipping-banner" class="col-md-8">
+                <div class="shipping-banner-wrap">
+                    <span class="sb-title">QUALITY EQUIPMENT AND SERVICES FOR YOUR PROJECT!</span>
+                    <span class="sb-subtitle">SHIPPING AUSTRALIA WIDE</span>
+                </div>
+            </div>
+            <div class="col-md-2 map-image">
+                <img src="https://www.citiindustries.com.au/assets/images/Flag-map_of_Australia_small2.png" alt="Citi Industries - Ship Australia Wide" />
+            </div>
+        </div>
+    </div>
+</div>
+<div id="featured-products" class="col-md-12">
+    <div class="container">
+        <h3>Featured Products</h3>
+        <p>&nbsp;</p>
+        <div class="feat-one">
+            [%if [@config:show_home_ads@]%]
+                [%advert type:'product' limit:'4' template:'' ad_group:'featuredcol1'%]
+                    [%param *header%]
+                        <div class="row">
+                    [%/param%]
+                    [%param footer%]
+                        </div>
+                    [%/param%]
+                    [%param *ifempty%]
+                        [%random_products category:'0' template:'' limit:'8'%]
+                            [%param *header%]
+                                <hr />
+                                <div class="row">
+                            [%/param%]
+                            [%param *footer%]
+                                </div>
+                            [%/param%]
+                        [%/random_products%]
+                    [%/param%]
+                [%/advert%]
+            [%/if%]
+            
+            [%if [@config:show_home_ads@]%]
+                [%advert type:'product' limit:'4' template:'' ad_group:'featuredcol2'%]
+                    [%param *header%]
+                        <div class="row">
+                    [%/param%]
+                    [%param footer%]
+                        </div>
+                    [%/param%]
+                    [%param *ifempty%]
+                        [%random_products category:'0' template:'' limit:'8'%]
+                            [%param *header%]
+                                <hr />
+                                <div class="row">
+                            [%/param%]
+                            [%param *footer%]
+                                </div>
+                            [%/param%]
+                        [%/random_products%]
+                    [%/param%]
+                [%/advert%]
+            [%/if%]
+            
+            [%if [@config:show_home_ads@]%]
+                [%advert type:'product' limit:'4' template:'' ad_group:'featuredcol3'%]
+                    [%param *header%]
+                        <div class="row">
+                    [%/param%]
+                    [%param footer%]
+                        </div>
+                    [%/param%]
+                    [%param *ifempty%]
+                        [%random_products category:'0' template:'' limit:'8'%]
+                            [%param *header%]
+                                <hr />
+                                <div class="row">
+                            [%/param%]
+                            [%param *footer%]
+                                </div>
+                            [%/param%]
+                        [%/random_products%]
+                    [%/param%]
+                [%/advert%]
+            [%/if%]
+            
+            [%if [@config:show_home_ads@]%]
+                [%advert type:'product' limit:'4' template:'' ad_group:'featuredcol4'%]
+                    [%param *header%]
+                        <div class="row">
+                    [%/param%]
+                    [%param footer%]
+                        </div>
+                    [%/param%]
+                    [%param *ifempty%]
+                        [%random_products category:'0' template:'' limit:'8'%]
+                            [%param *header%]
+                                <hr />
+                                <div class="row">
+                            [%/param%]
+                            [%param *footer%]
+                                </div>
+                            [%/param%]
+                        [%/random_products%]
+                    [%/param%]
+                [%/advert%]
+            [%/if%]
+            
+            [%if [@config:show_home_ads@]%]
+                [%advert type:'product' limit:'4' template:'' ad_group:'featuredcol5'%]
+                    [%param *header%]
+                        <div class="row">
+                    [%/param%]
+                    [%param footer%]
+                        </div>
+                    [%/param%]
+                    [%param *ifempty%]
+                        [%random_products category:'0' template:'' limit:'8'%]
+                            [%param *header%]
+                                <hr />
+                                <div class="row">
+                            [%/param%]
+                            [%param *footer%]
+                                </div>
+                            [%/param%]
+                        [%/random_products%]
+                    [%/param%]
+                [%/advert%]
+            [%/if%]
+        </div>
+    </div>
+</div>
+<div id="home-search-box" class="col-md-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-2"></div>
+            <div class="col-md-6 col-sm-8">
+                <form name="productsearch" method="get" action="/">
+                    <input type="hidden" name="rf" value="kw"/>
+                    <div class="input-group">
+                        <input class="form-control ajax_search" value="[%nohtml%][%filter ID:'keywords'%][%/filter%][%/nohtml%]" id="name_search" autocomplete="off" name="kw" type="text" placeholder="I'm looking for..." />
+                        <span class="input-group-btn">
+                            <button type="submit" value="Search" class="btn btn-default btn-search"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3 col-sm-2"></div>
+        </div>
+     </div>
+</div>
+<div id="home-blog" class="col-md-12">
+    [%thumb_list type:'content' content_type:'blog' template:'bloghome' show_next_level:'1' limit:'10' sortby:'date_posted-desc'%]
+        [%param *header%]
+            <h2 class="text-center">Project Information &amp; Advice</h2>
+            <div class="row blog-thumbs2">
+        [%/param%]
+        [%param *footer%]
+            </div>
+        [%/param%]
+    [%/thumb_list%]
+</div>
+<!-- 
+<div id="optin-section">
+Hidden for now
+</div>
+-->
+<div id="our-clients" class="col-md-12">
+    <div class="container">
+        <h3>Our Clients</h3>
+        <ul>
+            <li><img src="https://www.citiindustries.com.au/assets/images/microsoft.png" alt="microsoft" width="165" height="55"></li>
+            <li><img src="https://www.citiindustries.com.au/assets/images/toll.png" alt="toll" width="97" height="55"></li>
+            <li><img src="https://www.citiindustries.com.au/assets/images/logan-city-council.png" alt="logan-city-council" width="54" height="55"></li>
+            <li><img src="https://www.citiindustries.com.au/assets/images/xxxx.png" alt="xxxx" width="83" height="55"></li>
+            <li><img src="https://www.citiindustries.com.au/assets/images/redrooster.png" alt="redrooster" width="61" height="55"></li>
+            <li><img src="https://www.citiindustries.com.au/assets/images/qld-museum.png" alt="qld-museum" width="109" height="55"></li>
+            <li><img src="https://www.citiindustries.com.au/assets/images/ribs-rumps.png" alt="ribs-rumps" width="54" height="55"></li>
+            <li><img src="https://www.citiindustries.com.au/assets/images/marriot.png" alt="marriot" width="97" height="55"></li>
+            <li><img src="https://www.citiindustries.com.au/assets/images/centro.png" alt="centro" width="54" height="55"></li>
+        </ul>
+    </div>
+</div>
+<div id="signup-section" class="col-md-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Keep in the Loop<br>Free Product Specials &amp; Industry News</h3>
+            </div>
+            <div class="col-md-6">
+                <form method="post" action="[%URL type:'page' id:'subscribe' https:'1'%][%END URL%]">
+                    <input type="hidden" name="list_id" value="1">
+                    <input type="hidden" name="opt_in" value="y">
+                    <div class="input-group">
+                        <input name="inp-email" class="form-control" type="email" value="[%nohtml%][@inp-email@][%/nohtml%]" placeholder="Email Address" required/>
+                        <input name="inp-submit" type="hidden" value="y" />
+                        <input name="inp-opt_in" type="hidden" value="y" />
+                        <span class="input-group-btn">
+                            <input class="btn btn-default" type="submit" value="Sign Up Now" data-loading-text="<i class='fa fa-spinner fa-spin' style='font-size: 14px'></i>"/>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

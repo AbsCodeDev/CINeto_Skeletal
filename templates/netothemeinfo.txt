@@ -1,0 +1,15 @@
+type
+website
+----------
+name
+Custom Theme
+----------
+version
+1
+----------
+install_description
+<p>Ghost site for Citi Industries</p>
+----------
+description
+<h1>Custom Theme</h1>
+<p>Ghost site for Citi Industries</p>
