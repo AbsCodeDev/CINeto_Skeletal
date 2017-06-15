@@ -1133,7 +1133,7 @@ and (orientation : portrait) {
     }
 }
 
-/* Custom CSS ----------- */
+/* Custom CSS Update June 14, 2017----------- */
 #page-content .btn-success2.btn-enquire-top{
     font-size: 22px;
     padding: 10px 15px;
@@ -1153,4 +1153,8 @@ and (orientation : portrait) {
     .shipping-banner-wrap{
         margin-top: 0;
     }
+}
+
+.slick-slide img {
+    margin: 0 auto;
 }

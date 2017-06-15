@@ -1,0 +1,211 @@
+    </div>
+</div>
+<div class="wrapper-footer">
+	<div class="container">
+		<div class="row row-eq-height">
+			<div class="footer-col col-xs-12 col-sm-3">
+				<div class="row">
+					[%menu id:'web_footer'%]
+						[%param *level_1%]
+							<div class="col-xs-12">
+								<h4>[@name@]</h4>
+								<ul class="nav nav-pills nav-stacked">
+									[@next_level@]
+								</ul>
+							</div>
+						[%/param%]
+						[%param *level_2%]
+							<li><a href="[@url@]">[@name@]</a></li>
+						[%/param%]
+					[%/menu%]
+				</div>
+			</div>
+            <div class="footer-col col-xs-12 col-sm-3">
+				<div class="row">
+					[%menu id:'web_footer2'%]
+						[%param *level_1%]
+							<div class="col-xs-12">
+								<h4>[@name@]</h4>
+								<ul class="nav nav-pills nav-stacked">
+									[@next_level@]
+								</ul>
+							</div>
+						[%/param%]
+						[%param *level_2%]
+							<li><a href="[@url@]">[@name@]</a></li>
+						[%/param%]
+					[%/menu%]
+                    <img src="/assets/images/visa-mastercard-icon.png" width="120" style="margin-left:12px;margin-top:10px"/>
+				</div>
+			</div>
+            <div class="footer-col col-xs-12 col-sm-3">
+				<div class="row">
+					[%menu id:'web_footer3'%]
+						[%param *level_1%]
+							<div class="col-xs-12">
+								<h4>[@name@]</h4>
+								<ul class="nav nav-pills nav-stacked">
+									[@next_level@]
+								</ul>
+							</div>
+						[%/param%]
+						[%param *level_2%]
+							<li><a href="[@url@]">[@name@]</a></li>
+						[%/param%]
+					[%/menu%]
+                    <p>&nbsp;</p>
+                    <!--- DO NOT EDIT - GlobalSign SSL Site Seal Code - DO NOT EDIT ---><table width=125 border=0 cellspacing=0 cellpadding=0 title="CLICK TO VERIFY: This site uses a GlobalSign SSL Certificate to secure your personal information." ><tr><td><span id="ss_img_wrapper_gmogs_image_110-45_en_white"><a href="https://www.globalsign.com/" target=_blank title="GlobalSign Site Seal" rel="nofollow"><img style="margin-left:15px;" alt="SSL" border=0 id="ss_img" src="//seal.globalsign.com/SiteSeal/images/gs_noscript_110-45_en.gif"></a></span><script type="text/javascript" src="//seal.globalsign.com/SiteSeal/gmogs_image_110-45_en_white.js"></script></td></tr></table><!--- DO NOT EDIT - GlobalSign SSL Site Seal Code - DO NOT EDIT --->
+				</div>
+			</div>
+			<div class="footer-col col-xs-12 col-sm-3">
+				<ul class="list-inline list-social">
+					<li><a href="[%url type:'page' id:'contact_us'/%]" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					[%if [@config:facebook_account_id@]%]
+					<li><a href="[@config:facebook_account_id@]" target="_blank"><i class="fa fa-facebook-square text-facebook"></i></a></li>
+					[%/if%]
+					[%if [@config:twitter_account_id@]%]
+					<li><a href="[@config:twitter_account_id@]" target="_blank"><i class="fa fa-twitter-square text-twitter"></i></a></li>
+					[%/if%]
+					[%if [@config:googleplus_account_id@]%]
+					<li><a href="[@config:googleplus_account_id@]" target="_blank"><i class="fa fa-google-plus-square text-google-plus"></i></a></li>
+					[%/if%]
+					[%if [@config:youtube_account_id@]%]
+					<li><a href="[@config:youtube_account_id@]" target="_blank"><i class="fa fa-youtube-square text-youtube"></i></a></li>
+					[%/if%]
+					[%if [@config:instagram_account_id@]%]
+					<li><a href="[@config:instagram_account_id@]" target="_blank"><i class="fa fa-instagram text-instagram"></i></a></li>
+					[%/if%]
+					[%if [@config:pinterest_account_id@]%]
+					<li><a href="[@config:pinterest_account_id@]" target="_blank"><i class="fa fa-pinterest-square text-pinterest"></i></a></li>
+					[%/if%]
+					[%if [@config:tumblr_account_id@]%]
+					<li><a href="[@config:tumblr_account_id@]" target="_blank"><i class="fa fa-tumblr-square text-tumblr"></i></a></li>
+					[%/if%]
+					[%if [@config:linkedin_account_id@]%]
+					<li><a href="[@config:linkedin_account_id@]" target="_blank"><i class="fa fa-linkedin-square text-linkedin"></i></a></li>
+					[%/if%]
+				</ul>
+                <p><img style="width:90%;" src="/assets/images/citi_industries_logo_footer.png" alt="Citi Industries"></p>
+                <p style="color:#FFF;"><i class="fa fa-phone"></i> <a href="tel:1300 002 484">1300 002 484</a></p>
+                <p>PO BOX 1449<br/>
+                COORPAROO DC, QLD 4151<br/>
+                ABN 26164595144</p>
+                <p>&nbsp;</p>
+                <p>
+                    <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                    </script> Copyright &copy; Citi Industries</p>
+			</div>
+		</div>
+		<div class="row">
+			<!--<div class="col-xs-9 hidden-xs">
+				[%payment_methods ignore_balance:'1'%]
+					[%param header%]
+						<ul class="list-inline">
+					[%/param%]
+					[%param *body%]
+						[%if [@name@] like 'American Express'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-americanexpress"></div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'Visa'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-visa"></div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'MasterCard'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-mastercard"></div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'Discover'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-discover"></div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'Diners'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-diners"></div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'Cheque'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-cheque"></div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'Money Order'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-moneyorder"></div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'Direct Deposit'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-directdeposit"></div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'bpay'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-bpay"></div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'paypal'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-paypal"></div>
+								</div>
+							</li>
+						[%/if%]
+					[%/param%]
+					[%param *footer%]
+						</ul>
+					[%/param%]
+				[%/payment_methods%]
+			</div>-->
+		</div>
+	</div>
+</div>
+<!-- MOVING STYLESHEETS FROM HEADER -->
+<link rel="stylesheet" type="text/css" href="[%ntheme_asset%]css/component.min.css[%/ntheme_asset%]" />
+[%cdn_asset html:'1' type:'css' domain:'maxcdn.bootstrapcdn.com' library:'font-awesome' version:'4.4.0'%]css/font-awesome.min.css[%/cdn_asset%]
+[%cdn_asset html:'1' type:'css' library:'jquery_ui' version:'1.11.1'%]css/custom-theme/jquery-ui-1.8.18.custom.css[%/cdn_asset%]
+[%cdn_asset html:'1' type:'css' library:'fancybox' version:'2.1.5'%]jquery.fancybox.css[%/cdn_asset%]
+<!-- Required Neto Scripts - DO NOT REMOVE -->
+<!--[%cdn_asset html:'1' type:'js' library:'jquery' version:'1.11.3'%]jquery.min.js[%/cdn_asset%]-->
+[%cdn_asset html:'1' type:'js' library:'fancybox' version:'2.1.5'%]jquery.fancybox.pack.js[%/cdn_asset%]
+[%NETO_JS html:'1' id:'main' /%]
+[%cdn_asset html:'1' type:'js' library:'bootstrap' version:'3.3.6'%]bootstrap.min.js[%/cdn_asset%]
+<script type="text/javascript" src="[%ntheme_asset%]js/custom.js[%/ntheme_asset%]"></script>
+<script src="[%ntheme_asset%]js/jquery.dlmenu.js[%/ntheme_asset%]"></script>
+[%cdn_asset html:'1' type:'js' library:'jquery_ui' version:'1.11.1'%]js/jquery-ui-1.8.18.custom.min.js[%/cdn_asset%]
+[%SITE_VALUE id:'footer_javascript' type:'load'/%]
+<!-- Responsive Caousel -->
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="[%ntheme_asset%]js/slick.min.js[%/ntheme_asset%]"></script>
+<!-- Analytics -->
+[%load_template file:"trackingcode/VisitorTracking.html"/%]
+<div class="npopup" style=""> <a href="javascript:void(0);" class="npopup-btn-close"></a>
+	<div class="npopup-body">
+	</div>
+</div>
+<div class="nactivity"></div>
+</body>
+</html>
