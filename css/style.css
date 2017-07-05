@@ -70,14 +70,14 @@ h5,
 	border-color: #555 /*{btn-default-border-colour}*/;
 }
 .btn-search {
-    background-color: #2eb2ff !important /*{btn-default-bg-colour}*/;
-	border-color: #2eb2ff !important /*{btn-default-border-colour}*/;
+    background-color: #777777 !important /*{btn-default-bg-colour}*/;
+	border-color: #777777 !important /*{btn-default-border-colour}*/;
     height: 40px;
     margin-left: 1px;
 }
 .btn-search:hover {
-    background-color: #49b9e5 !important /*{btn-default-bg-colour}*/;
-	border-color: #49b9e5 !important /*{btn-default-border-colour}*/;
+    background-color: #777777 !important /*{btn-default-bg-colour}*/;
+	border-color: #777777 !important /*{btn-default-border-colour}*/;
     color:#FFF !important;
 }
 .btn-default:hover,
@@ -209,14 +209,15 @@ fieldset[disabled] .btn-danger.active {
 	border-color: #272262 /*{btn-success-border-colour}*/;
 }
 .btn-success2 {
-	color: #ffffff /*{btn-success-text-colour}*/;
-	background-color: #3FB34E /*{btn-success-bg-colour}*/;
-	border-color: #3FB34E /*{btn-success-border-colour}*/;
+	color: #000 /*{btn-success-text-colour}*/;
+	background-color: #FCCB31 /*{btn-success-bg-colour}*/;
+	border-color: #FCCB31 /*{btn-success-border-colour}*/;
+    font-weight: 600;
 }
 .btn-success2:hover {
-    color: #ffffff /*{btn-success-text-colour}*/;
-	background-color: #359338 /*{btn-success-bg-colour}*/;
-	border-color: #359338 /*{btn-success-border-colour}*/;
+    color: #000 /*{btn-success-text-colour}*/;
+	background-color: #FCCB31 /*{btn-success-bg-colour}*/;
+	border-color: #FCCB31 /*{btn-success-border-colour}*/;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -820,16 +821,11 @@ ul#top-links li:last-child a {
 .back a {
     margin: 30px 20px;
 }
+.text-facebook, .text-instagram,
+.text-pinterest,.text-twitter  {
+    color: #FFFFFF;
+}
 
-.text-facebook {
-    color: #00acee;
-}
-.text-instagram {
-    color: #00acee;
-}
-.text-pinterest {
-    color: #00acee;
-}
 
 /* ==================================================
     Other Sections - Home Page 
@@ -1157,4 +1153,8 @@ and (orientation : portrait) {
 
 .slick-slide img {
     margin: 0 auto;
+}
+
+.form-control {
+    border: 2px solid #b1b3b5 !important;
 }
