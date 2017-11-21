@@ -31,7 +31,7 @@
                     <small>&nbsp;&nbsp;|&nbsp;&nbsp;Date Posted: [%FORMAT type:'date'%][@date_posted@][%/FORMAT%]&nbsp;</small>
                 [%/IF%]
             </p>-->
-            <img style="width:100%;" src="[%asset_url type:'content' id:'[@content_id@]' default:'[@config:imageurl@]/pixel.gif'/%]" />
+            <img style="width:100%;" src="[%asset_url type:'content' id:'[@content_id@]' thumb:'alt_1' default:'[@config:imageurl@]/pixel.gif'/%]" />
             <p>&nbsp;</p>
             [@page_content@]
            <br>

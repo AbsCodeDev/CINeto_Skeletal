@@ -103,10 +103,12 @@
 		<input type="hidden" id="thumb[@rndm@][@SKU@]" name="thumb" value="[@thumb@]">
 		<input type="hidden" id="sku[@rndm@][@SKU@]" name="sku" value="[@SKU@]">
 		<div class="row btn-stack">
-			<!--<div class="col-xs-12 col-md-4">
+		  
+		  [%IF [@price@] > 0 %]
+			<div class="col-xs-12 col-md-2">
 				<input type="number" min="[@min_qty@]" class="form-control qty input-lg" id="qty[@rndm@][@SKU@]" name="qty" value="[%data id:'min_qty' if:'ne' value:'0' %][@min_qty@][%end data%][%data id:'min_qty' if:'eq' value:'0' %]1[%end data%]" size="2"/>
-			</div>-->
-			<!--<div class="col-xs-12 col-md-4">
+			</div>
+			<div class="col-xs-12 col-md-4">
 				[%IF [@store_quantity@] > 0 AND [@preorder@] %]
 				<button type="button" title="Add to Cart" class="addtocart btn btn-warning btn-block btn-lg btn-loads" data-loading-text="<i class='fa fa-spinner fa-spin' style='font-size: 14px'></i>" rel="[@rndm@][@SKU@]"><i class="fa fa-clock-o icon-white"></i> Pre-Order Now</button>
 				[%ELSEIF [@store_quantity@] > 0 AND ![@preorder@] %]
@@ -116,7 +118,7 @@
 				[%ELSE%]
 				<a class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#notifymodal"><i class="fa fa-envelope"></i> Notify Me</a>
 				[%END IF%]
-			</div>-->
+			</div>
 			<!--<div class="col-xs-12 col-md-4">
 				[%if [@config:show_wishlist@]%]
 					<div class="product-wishlist">
@@ -131,8 +133,9 @@
 					</div>
 				[%/if%]
 			</div>-->
-            <div class="col-xs-12 col-md-6">
-                <a class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#notifymodal"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Enquire Now</a>
+			[%END IF%]
+            <div class="col-xs-12 col-md-4">
+                <a class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#notifymodal"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Get a Quote</a>
                 <!--<a class="btn btn-info btn-lg btn-block" href="tel:1300002484"><i class="fa fa-phone"></i>&nbsp;&nbsp;Call Us 1300 00 2484</a>-->
             </div>
             <div class="col-xs-12 col-md-6">
@@ -216,14 +219,20 @@
                     <input class="form-control" name="inp-email" required="" size="40" type="email" value="[%nohtml%][@inp-email@][%end nohtml%]" />
                     </div>
 
-                    <div class="form-group"><label>Phone <span class="small text-danger">*</span></label> 
+                    <div class="form-group"><label>Phone <span class="small text-danger">*</span></label>
                     <input class="form-control" name="inp-phone" size="40" required="" type="text" value="[%nohtml%][@inp-phone@][%end nohtml%]" />
                     </div>
 
-                    <div class="form-group"><label style="margin-bottom:0px;">Suburb/Site Address</label><br />
+                    <div class="form-group"><label style="margin-bottom:0px;">Suburb/Site Address <span class="small text-danger">*</span></label><br />
                     <small style="margin-bottom:8px;display:block;">Include Address &amp; State so we can provide our most accurate advice</small>
-                    <input class="form-control" name="inp-address" size="40" type="text" value="[%nohtml%][@inp-address@][%end nohtml%]" />
-                    </div>
+                    <input class="form-control" name="inp-address" size="40" required="" type="text" value="[%nohtml%][@inp-address@][%end nohtml%]" />
+					</div>
+					
+					<div class="form-group"><label>State <span class="small text-danger">*</span></label>
+						<small style="margin-bottom:8px;display:block;">(e.g. NSW)</small>
+						<input class="form-control" name="inp-state" size="40" required="" type="text" value="[%nohtml%][@inp-state@][%end nohtml%]" />
+					</div>
+
                     <div class="clear">&nbsp;</div>
 
                     <div class="form-group"><label style="margin-bottom:0px;">Message <span class="small text-danger">*</span></label><br />

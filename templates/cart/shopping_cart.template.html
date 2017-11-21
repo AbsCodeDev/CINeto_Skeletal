@@ -4,16 +4,12 @@
 	</div>
 	[%load_template file:'cart/cart.error.html'/%]
 	<div class="row btn-stack">
-		<div class="col-xs-12 col-md-9">
-			[%if [@config:allow_user_quote@] eq '1'%]
-				<button class="btn btn-default" type="button" onclick="window.location='[%url page:'checkout' fn:'quote'/%]';" title="Create Quote From Cart"> <i class="fa fa-list-alt"></i> Create Quote From Cart</button>
-			[%/if%]
-			<!-- Uncomment if you'd like a "Edit gift messages" button above the cart summary. Requires checkout_upsell_extra to be configured correctly.
-			[%if [@config:checkout_upsell_extra@]%]
-				<a class="btn btn-default" type="button" href="[%url page:'checkout' fn:'upsell'/%]" title="Edit extra options"> <i class="fa fa-pencil icon-white"></i> Edit extra options</a>
-			[%/if%] -->
-		</div>
-		<div class="col-xs-12 col-md-3">
+		[%config id:'ALLOW_USER_QUOTE' if:'==' value:'1'%]
+			<div class="col-xs-12 col-md-3">
+				<button class="btn btn-default btn-block" type="button" onclick="window.location='[%url page:'checkout' fn:'quote'/%]';" title="Create Quote From Cart"> <i class="fa fa-list-alt"></i> Create Quote From Cart </button>
+			</div>
+		[%/config%]
+		<div class="col-xs-12 col-md-3 [%config id:'ALLOW_USER_QUOTE' if:'==' value:'1'%]col-md-offset-6[%/config%][%config id:'ALLOW_USER_QUOTE' if:'==' value:'0'%]col-md-offset-9[%/config%]">
 			<button class="btn btn-success btn-lg btn-block" type="button" onclick="window.location='[%url page:'checkout' fn:'payment'/%]';" title="Checkout Now"><i class="fa fa-shopping-cart icon-white"></i> Checkout Now</button>
 		</div>
 	</div>

@@ -763,11 +763,10 @@ ul#top-links li:last-child a {
     font-weight: 700;
 }
 .buying-options .btn-stack .btn {
-    color: #000 /*{btn-default-text-colour}*/;
-	background-color: #FCCB31 /*{btn-default-bg-colour}*/;
-	border-color: #FCCB31 /*{btn-default-border-colour}*/;
+    color: #ffffff;
+	background-color: #FCCB31; 
+	border-color: #FCCB31; 
 }
-.buying-options .btn-stack .btn:hover,
 .buying-options .btn-stack .btn:focus,
 .buying-options .btn-stack .btn:active {
 	color: #000 /*{btn-default-text-colour-hover}*/;
@@ -821,8 +820,7 @@ ul#top-links li:last-child a {
 .back a {
     margin: 30px 20px;
 }
-.text-facebook, .text-instagram,
-.text-pinterest,.text-twitter  {
+.footer-col .text-facebook, .footer-col .text-instagram, .footer-col .text-pinterest, .footer-col .text-twitter  {
     color: #FFFFFF;
 }
 
@@ -1129,7 +1127,7 @@ and (orientation : portrait) {
     }
 }
 
-/* Custom CSS Update June 14, 2017----------- */
+/* Custom CSS Update November 21, 2017----------- */
 #page-content .btn-success2.btn-enquire-top{
     font-size: 22px;
     padding: 10px 15px;
@@ -1157,4 +1155,91 @@ and (orientation : portrait) {
 
 .form-control {
     border: 2px solid #b1b3b5 !important;
+}
+
+.dropdown > .social-btn {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.social-btn i {
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.social-btn i:first-child {
+    padding-left: 10px;
+}
+
+.buying-options button.addtocart {
+    background: #3FB34E !important;
+    color: #ffffff !important;
+    border: 0;
+}
+
+.buying-options .btn-quote {
+    color: #fff !important;
+}
+
+.bg-toll {
+    width: 97px; height: 55px;
+    background: url('/assets/images/css_sprites.png') -10px -160px;
+    display: inline-block;
+}
+
+.bg-ribs_rumps {
+    width: 54px; height: 55px;
+    background: url('/assets/images/css_sprites.png') -293px -160px;
+    display: inline-block;
+}
+
+.bg-redrooster {
+    width: 61px; height: 55px;
+    background: url('/assets/images/css_sprites.png') -293px -85px;
+    display: inline-block;
+}
+
+.bg-qld_museum {
+    width: 109px; height: 55px;
+    background: url('/assets/images/css_sprites.png') -10px -85px;
+    display: inline-block;
+}
+
+.bg-microsoft {
+    width: 165px; height: 55px;
+    background: url('/assets/images/css_sprites.png') -10px -10px;
+    display: inline-block;
+}
+
+.bg-marriot {
+    width: 97px; height: 55px;
+    background: url('/assets/images/css_sprites.png') -127px -160px;
+    display: inline-block;
+}
+
+.bg-logan_city_council {
+    width: 54px; height: 55px;
+    background: url('/assets/images/css_sprites.png') -10px -235px;
+    display: inline-block;
+}
+
+.bg-centro {
+    width: 54px; height: 55px;
+    background: url('/assets/images/css_sprites.png') -84px -235px;
+    display: inline-block;
+}
+
+.bg-brisbane_logo {
+    width: 78px; height: 78px;
+    background: url('/assets/images/css_sprites.png') -195px -10px;
+    display: inline-block;
+}
+
+.bg-xxxx {
+    width: 83px; height: 55px;
+    background: url('/assets/images/css_sprites.png') -293px -10px;
+    display: inline-block;
 }

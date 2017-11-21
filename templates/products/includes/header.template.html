@@ -18,8 +18,8 @@
 				Rated <span itemprop="ratingValue">[@rating@]</span>/<span itemprop="bestRating">5</span> based on <span itemprop="ratingCount">[@reviews@]</span> reviews.
 			</span>
 		[%/if%]
-		<!--div class="dropdown">
-			<button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+		<div class="dropdown">
+			<button class="btn btn-default btn-xs dropdown-toggle social-btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 				Share: <i class="fa fa-facebook-square text-facebook"></i>
 				<i class="fa fa-twitter-square text-twitter"></i>
 				<i class="fa fa-pinterest-square text-pinterest"></i>
@@ -32,7 +32,7 @@
 				<li role="presentation"><a class="js-social-share" role="menuitem" tabindex="-1" href="//www.pinterest.com/pin/create/button/?url=[%url_encode%][@url@][%/url_encode%]&amp;media=[%url_encode%][@config:homeurl@][%asset_url type:'product' id:'[@SKU@]' thumb:'full' check_parent:'y'/%][%/url_encode%]&amp;description=[%url_encode%][@name@][%/url_encode%]"><i class="fa fa-pinterest-square text-pinterest"></i> Pinterest</a></li>
 				<li role="presentation"><a class="js-social-share" role="menuitem" tabindex="-1" href="//plus.google.com/share?url=[%url_encode%][@url@][%/url_encode%]"><i class="fa fa-google-plus-square text-google-plus"></i> Google+</a></li>
 			</ul>
-		</div-->
+		</div>
     <br/>
     [%IF [@short_description@]%]
         <p>

@@ -7,32 +7,32 @@
         <div style="display:block;height:40px;"></div>
         <div class="col-md-4" style="margin-bottom:25px;">
             <div style="overflow:hidden;">
-                <a href="https://www.citiindustries.com.au/greasetrap-products"><img class="grow" src="assets/images/new-greastrap3.jpg" /></a>
+                <a href="https://www.citiindustries.com.au/greasetrap-products"><img class="grow" src="assets/images/new-greastrap3-h.jpg" /></a>
             </div>
         </div>
         <div class="col-md-4" style="margin-bottom:25px;">
             <div style="overflow:hidden;">
-                <a href="https://www.citiindustries.com.au/wash-bays-design-and-build"><img class="grow" src="assets/images/new-washbay3.jpg" /></a>
+                <a href="https://www.citiindustries.com.au/wash-bays-design-and-build"><img class="grow" src="assets/images/new-washbay3-h.jpg" /></a>
             </div>
         </div>
         <div class="col-md-4" style="margin-bottom:25px;">
             <div style="overflow:hidden;">
-                <a href="https://www.citiindustries.com.au/hydraulic-design"><img class="grow" src="assets/images/new-hydraulicdesign.jpg" /></a>
+                <a href="https://www.citiindustries.com.au/hydraulic-design"><img class="grow" src="assets/images/new-hydraulicdesign-h.jpg" /></a>
             </div>
         </div>
         <div class="col-md-4" style="margin-bottom:25px;">
             <div style="overflow:hidden;">
-                <a href="https://www.citiindustries.com.au/carpark-products"><img class="grow" src="assets/images/new-carpark2.jpg" /></a>
+                <a href="https://www.citiindustries.com.au/carpark-products"><img class="grow" src="assets/images/new-carpark2-h.jpg" /></a>
             </div>
         </div>
         <div class="col-md-4" style="margin-bottom:25px;">
             <div style="overflow:hidden;">
-                <a href="https://www.citiindustries.com.au/hotwater-products"><img class="grow" src="assets/images/new-hotwater.jpg" /></a>
+                <a href="https://www.citiindustries.com.au/hotwater-products"><img class="grow" src="assets/images/new-hotwater-h.jpg" /></a>
             </div>
         </div>
         <div class="col-md-4" style="margin-bottom:25px;">
             <div style="overflow:hidden;">
-                <a href="https://www.citiindustries.com.au/kitchen-plumbing-products"><img class="grow" src="assets/images/new-kitchen2.jpg" /></a>
+                <a href="https://www.citiindustries.com.au/kitchen-plumbing-products"><img class="grow" src="assets/images/new-kitchen2-h.jpg" /></a>
             </div>
         </div>
     <div style="display:block;height:40px;"></div>
@@ -49,7 +49,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2 seal-image">
-                <img src="https://www.citiindustries.com.au/assets/images/Guarantee-Seal-400x300.png" alt="Citi Industries - Guaranteed Safe" />
+                <img src="https://www.citiindustries.com.au/assets/images/Guarantee-Seal-400x300-h.png" alt="Citi Industries - Guaranteed Safe" />
             </div>
             <div id="shipping-banner" class="col-md-8">
                 <div class="shipping-banner-wrap">
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="col-md-2 map-image">
-                <img src="https://www.citiindustries.com.au/assets/images/Flag-map_of_Australia_small2.png" alt="Citi Industries - Ship Australia Wide" />
+                <img src="https://www.citiindustries.com.au/assets/images/Flag-map_of_Australia_small2-h.png" alt="Citi Industries - Ship Australia Wide" />
             </div>
         </div>
     </div>
@@ -133,50 +133,6 @@
                     [%/param%]
                 [%/advert%]
             [%/if%]
-            
-            [%if [@config:show_home_ads@]%]
-                [%advert type:'product' limit:'4' template:'' ad_group:'featuredcol4'%]
-                    [%param *header%]
-                        <div class="row">
-                    [%/param%]
-                    [%param footer%]
-                        </div>
-                    [%/param%]
-                    [%param *ifempty%]
-                        [%random_products category:'0' template:'' limit:'8'%]
-                            [%param *header%]
-                                <hr />
-                                <div class="row">
-                            [%/param%]
-                            [%param *footer%]
-                                </div>
-                            [%/param%]
-                        [%/random_products%]
-                    [%/param%]
-                [%/advert%]
-            [%/if%]
-            
-            [%if [@config:show_home_ads@]%]
-                [%advert type:'product' limit:'4' template:'' ad_group:'featuredcol5'%]
-                    [%param *header%]
-                        <div class="row">
-                    [%/param%]
-                    [%param footer%]
-                        </div>
-                    [%/param%]
-                    [%param *ifempty%]
-                        [%random_products category:'0' template:'' limit:'8'%]
-                            [%param *header%]
-                                <hr />
-                                <div class="row">
-                            [%/param%]
-                            [%param *footer%]
-                                </div>
-                            [%/param%]
-                        [%/random_products%]
-                    [%/param%]
-                [%/advert%]
-            [%/if%]
         </div>
     </div>
 </div>
@@ -221,7 +177,7 @@ Hidden for now
 <div id="our-clients" class="col-md-12">
   <div class="container">
     <h3>Our Clients</h3>
-    <div class="autoplay">
+    <!-- <div class="autoplay">
             <div><img src="https://www.citiindustries.com.au/assets/images/microsoft.png" alt="microsoft" width="165" height="55"></div>
             <div><img src="https://www.citiindustries.com.au/assets/images/toll.png" alt="toll" width="97" height="55"></div>
             <div><img src="https://www.citiindustries.com.au/assets/images/logan-city-council.png" alt="logan-city-council" width="54" height="55"></div>
@@ -234,8 +190,21 @@ Hidden for now
             <div><img src="https://www.citiindustries.com.au/assets/images/brisbane-logo.png" alt="brisbane-logo"  height="55"></div>
             <div><img src="https://www.citiindustries.com.au/assets/images/redspot-logo.png" alt="redspot-logo" style="position: relative; top: 15px;"></div>
             <div><img src="https://www.citiindustries.com.au/assets/images/dhollandia-Logo.png" alt="dhollandia-Logo" height="55"></div>
-            <div><img src="https://www.citiindustries.com.au/assets/images/bunny-logo.png" height="55" alt="bunny-logo"></div>            
-    </div>
+            <div><img src="https://www.citiindustries.com.au/assets/images/bunny-logo-h.png" height="55" alt="bunny-logo"></div>            
+    </div> -->
+    <div class="autoplay">
+        <div><i class="bg-toll"></i></div>
+        <div><i class="bg-ribs_rumps"></i></div>
+        <div><i class="bg-redrooster"></i></div>
+        <div><i class="bg-qld_museum"></i></div>
+        <div><i class="bg-microsoft"></i></div>
+        <div><i class="bg-marriot"></i></div>
+        <div><i class="bg-logan_city_council"></i></div>
+        <div><i class="bg-centro"></i></div>
+        <div><i class="bg-brisbane_logo"></i></div>
+        <div><i class="bg-xxxx"></i></div>
+          
+</div>
   </div>
 </div>
   <script type="text/javascript">

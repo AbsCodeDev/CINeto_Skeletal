@@ -101,9 +101,6 @@
 							<div class="_itmspec_listopt col-xs-12 col-md-6" ref="[@specific_id@]">
 								<div class="variation-name">
 									<strong>[@specific_name@]</strong>
-									[%if [@specific_name@] like 'CAPITAL CITY METRO DELIVERY (CHOOSE YOUR STATE)' %]
-										<br><span style="font-size: small">Choose GET A QUOTE if outside the Capital City</span>
-									[%/if%]
 								</div>
 									<div class="specific">
 										<input type="hidden" class="_itmspec_val" ref="[@specific_id@]" value="[@selected_id@]">
@@ -239,7 +236,7 @@
                         <div class="product-spec-table">
                             <!-- SPECIFICATION TABLE START -->
                             <div class="col-md-7">
-                                [%if [@misc14@] ne '' or [@misc19@] ne '' or [@misc1@] ne '' or [@misc2@] ne '' or [@misc3@] ne '' or [@misc20@] ne '' or [@misc21@] ne '' or [@misc23@] ne '' or [@misc25@] ne '' or [@misc26@] ne '' or [@misc27@] ne '' or [@misc28@] ne '' or [@misc29@] ne '' or [@misc30@] ne '' or [@misc31@] ne '' or [@misc32@] ne '' or [@misc33@] ne '' %]
+                                [%if [@misc19@] ne '' or [@misc1@] ne '' or [@misc2@] ne '' or [@misc3@] ne '' or [@misc20@] ne '' or [@misc21@] ne '' or [@misc22@] ne '' or [@misc23@] ne '' or [@misc25@] ne '' or [@misc26@] ne '' or [@misc27@] ne '' or [@misc28@] ne '' or [@misc29@] ne '' or [@misc30@] ne '' or [@misc31@] ne '' or [@misc32@] ne '' or [@misc33@] ne '' %]
                                     <table>
                                         <tbody>
                                             <tr>
@@ -276,14 +273,6 @@
                                                 [%else%]
                                                     <!-- Nothing happens here / Nothing to display -->
                                                 [%/if%]
-											 </tr>
-											 <tr>
-                                                [%if [@misc14@] ne '' %]
-                                                    <td>Weight <small>(kg)</small></td>
-                                                    <td>[@misc14@]</td>
-                                                [%else%]
-                                                    <!-- Nothing happens here / Nothing to display -->
-                                                [%/if%]
                                              </tr>
                                             <tr>
                                                 [%if [@misc20@] ne '' %]
@@ -297,6 +286,14 @@
                                                 [%if [@misc21@] ne '' %]
                                                     <td>Max Flow Rate <small>(L/HR)</small></td>
                                                     <td>[@misc21@]</td>
+                                                [%else%]
+                                                    <!-- Nothing happens here / Nothing to display -->
+                                                [%/if%]
+                                             </tr>
+                                            <tr>
+                                                [%if [@misc22@] ne '' %]
+                                                    <td>Diameter <small>(mm)</small></td>
+                                                    <td>[@misc22@]</td>
                                                 [%else%]
                                                     <!-- Nothing happens here / Nothing to display -->
                                                 [%/if%]
@@ -389,7 +386,7 @@
                                     <!-- Nothing happens here / Nothing to display -->
                                 [%/if%]
                                 
-                                [%if [@misc22@] ne '' or [@misc14@] ne '' or [@misc4@] ne '' or [@misc5@] ne '' or [@misc6@] ne '' or [@misc7@] ne '' or [@misc8@] ne '' or [@misc9@] ne '' or [@misc10@] ne '' or [@misc16@] ne '' or [@misc24@] ne '' %]
+                                [%if [@misc14@] ne '' or [@misc4@] ne '' or [@misc5@] ne '' or [@misc6@] ne '' or [@misc7@] ne '' or [@misc8@] ne '' or [@misc9@] ne '' or [@misc10@] ne '' or [@misc16@] ne '' or [@misc24@] ne '' %]
                                     <table>
                                         <tbody>
                                             <tr>
@@ -418,11 +415,11 @@
                                                 [%else%]
                                                     <!-- Nothing happens here / Nothing to display -->
                                                 [%/if%]
-											 </tr>
-											 <tr>
-                                                [%if [@misc22@] ne '' %]
-                                                    <td>Diameter</td>
-                                                    <td>[@misc22@]</td>
+                                             </tr>
+                                             <tr>
+                                                [%if [@misc14@] ne '' %]
+                                                    <td>Weight</td>
+                                                    <td>[@misc14@]</td>
                                                 [%else%]
                                                     <!-- Nothing happens here / Nothing to display -->
                                                 [%/if%]
@@ -484,7 +481,7 @@
 
                                 <div class="col-md-5">&nbsp;</div>
 
-                                <div class="clearfix">&nbsp;</div>
+                                <div class="clearfix">&nbsp;</div>                                                      
                             <!-- SPECIFICATION TABLE END -->
 
                         </div>
